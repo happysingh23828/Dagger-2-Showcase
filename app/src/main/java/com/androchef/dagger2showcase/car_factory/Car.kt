@@ -2,20 +2,22 @@ package com.androchef.dagger2showcase.car_factory
 
 import android.util.Log
 import com.androchef.dagger2showcase.car_factory.drivers.Driver
-import com.androchef.dagger2showcase.car_factory.engines.PetrolEngine
+import com.androchef.dagger2showcase.car_factory.engines.Engine
 import com.androchef.dagger2showcase.car_factory.extra.Remote
 import com.androchef.dagger2showcase.car_factory.wheels.Wheels
 
-class Car {
+class Car constructor(
+    private val engine: Engine,
+    private val driver: Driver,
+    private val wheels: Wheels,
+    private val remote: Remote
+) {
 
-    private var engine  = PetrolEngine()
+    init {
+        enableRemote(remote)
+    }
 
-    private var driver: Driver = Driver("Happy Singh")
-
-    private var wheels: Wheels = Wheels()
-
-
-    fun enableRemote(remote: Remote) {
+    private fun enableRemote(remote: Remote) {
         remote.setListener(this)
     }
 

@@ -14,9 +14,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun startCar() {
-        val remote = Remote()
-        val car = Car()
-        car.enableRemote(remote)
-        car.drive()
+        (application as App).appContainer.getCar().drive()
     }
 }

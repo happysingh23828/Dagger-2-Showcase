@@ -3,11 +3,7 @@ package com.androchef.dagger2showcase.car_factory.engines
 import android.util.Log
 import com.androchef.dagger2showcase.car_factory.Car.Companion.TAG
 
-class PetrolEngine : Engine {
-
-    private var horsePower: Int = 40
-
-    private var engineCapacity: Int = 50
+class PetrolEngine constructor(private val horsePower: Int,private val engineCapacity: Int): Engine {
 
     override fun start() {
         Log.d(
