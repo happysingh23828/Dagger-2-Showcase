@@ -5,19 +5,19 @@ import com.androchef.dagger2showcase.car_factory.drivers.Driver
 import com.androchef.dagger2showcase.car_factory.engines.Engine
 import com.androchef.dagger2showcase.car_factory.extra.Remote
 import com.androchef.dagger2showcase.car_factory.wheels.Wheels
+import com.androchef.dagger2showcase.dagger_di.scope.PerActivity
+import javax.inject.Inject
 
-class Car constructor(
-    private val engine: Engine,
-    private val driver: Driver,
-    private val wheels: Wheels,
-    private val remote: Remote
-) {
+@PerActivity
+class Car @Inject constructor(var engine: Engine,var driver: Driver) { ///Construction injection
 
-    init {
-        enableRemote(remote)
-    }
+    //Field Injection
+    @Inject
+    lateinit var wheels: Wheels
 
-    private fun enableRemote(remote: Remote) {
+    //Method Injection
+    @Inject
+    fun enableRemote(remote: Remote) {
         remote.setListener(this)
     }
 

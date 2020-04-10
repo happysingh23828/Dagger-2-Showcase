@@ -37,7 +37,7 @@ class AppContainer {
     private val driver: Driver = DriverFactory.getDriver("Happy Singh")
 
     //Make your car object and expose it by getter Method.
-    private val car: Car = Car(engine, driver, wheels, remote)
+    private val car: Car = Car(engine, driver)
 
     //exposing car to the world [LOL]
     fun getCar(): Car {

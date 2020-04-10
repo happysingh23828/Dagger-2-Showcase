@@ -2,8 +2,13 @@ package com.androchef.dagger2showcase.car_factory.engines
 
 import android.util.Log
 import com.androchef.dagger2showcase.car_factory.Car.Companion.TAG
+import javax.inject.Inject
+import javax.inject.Named
 
-class PetrolEngine constructor(private val horsePower: Int,private val engineCapacity: Int): Engine {
+class PetrolEngine @Inject constructor(
+    @Named("horse_power") var horsePower: Int,
+    @Named("engine_capacity") var engineCapacity: Int
+) : Engine {
 
     override fun start() {
         Log.d(
