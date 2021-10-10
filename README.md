@@ -16,3 +16,9 @@ We need to drive the car. so for driving the car we need dependencies like
 - [Driver](https://github.com/happysingh23828/Dagger-2-Showcase/blob/dagger_dependency_injection/app/src/main/java/com/androchef/dagger2showcase/car_factory/drivers/Driver.kt)
 
 These 3 branches tells how can these dependecies are provided to Car Class.
+
+### - Contact - Let's become friend
+- [Blog](http://happysingh.dev/)
+- [Youtube](https://www.youtube.com/channel/UCILhpbLSFkGzsiCYAeR30DA)
+- [Github](https://github.com/happysingh23828)
+- [Linkedin](https://www.linkedin.com/in/happpysingh23828/)
